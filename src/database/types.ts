@@ -197,6 +197,25 @@ export interface CreateAchievementInput {
     metadata?: Record<string, unknown>;
 }
 
+export interface CreateUserInput {
+    email: string;
+    password?: string;
+    name?: string;
+    avatarUrl?: string;
+    role?: UserRole;
+    provider?: string;
+    providerId?: string;
+}
+
+export interface UpdateUserInput {
+    email?: string;
+    password?: string;
+    name?: string;
+    avatarUrl?: string;
+    role?: UserRole;
+    authorityLevel?: number;
+}
+
 // =============================================================================
 // FILTER TYPES
 // =============================================================================

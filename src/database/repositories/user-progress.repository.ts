@@ -125,8 +125,8 @@ export class UserProgressRepository implements IUserProgressRepository {
 
         const totalLessons = progressList.length;
         const completedLessons = progressList.filter(p => p.completedAt !== null).length;
-        const totalTimeSpent = progressList.reduce((sum, p) => sum + p.timeSpentSecs, 0);
-        const totalHintsUsed = progressList.reduce((sum, p) => sum + p.hintsUsed, 0);
+        const totalTimeSpent = progressList.reduce((sum: number, p: any) => sum + p.timeSpentSecs, 0);
+        const totalHintsUsed = progressList.reduce((sum: number, p: any) => sum + p.hintsUsed, 0);
 
         return {
             totalLessons,
